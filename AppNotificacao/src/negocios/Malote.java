@@ -5,6 +5,8 @@ public class Malote {
 	public String srte;
 	public int quantidade;
 	public String dataEnvio;
+	public Processo processo;
+	
 	
 	public void exibir() {
 		System.out.printf("Informação :: SRTE: %s - Quantidade de Processos: %d"
@@ -12,6 +14,10 @@ public class Malote {
 				srte,
 				quantidade,
 				dataEnvio
-				);	
+				);
+		
+		processo.exibir();
+		
+		
 	}
 }
