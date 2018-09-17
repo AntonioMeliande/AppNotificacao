@@ -2,7 +2,7 @@ package negocios;
 
 public class Malote {
 	
-	private String[] srtes;
+	private String[] srte;
 	private String oficio;
 	private int quantidade;
 	private String dataEnvio;
@@ -12,8 +12,8 @@ public class Malote {
 		
 	}
 	
-	public Malote(String[] srtes, String oficio, int quantidade, String dataEnvio) {
-		this.srtes = srtes;
+	public Malote(String[] srte, String oficio, int quantidade, String dataEnvio) {
+		this.srte = srte;
 		this.oficio = oficio;
 		this.quantidade = quantidade;
 		this.dataEnvio = dataEnvio;
@@ -23,7 +23,7 @@ public class Malote {
 	public void exibir() {
 		System.out.println("\n#MALOTE#\n");
 		
-		for(String o : srtes) {
+		for(String o : srte) {
 			System.out.printf("SRTE: %s\n", o);
 		}
 		
@@ -39,12 +39,12 @@ public class Malote {
 				
 	}
 
-	public String[] getSrtes() {
-		return srtes;
+	public String[] getSrte() {
+		return srte;
 	}
 
-	public void setSrtes(String[] srtes) {
-		this.srtes = srtes;
+	public void setSrte(String[] srte) {
+		this.srte = srte;
 	}
 
 	public int getQuantidade() {

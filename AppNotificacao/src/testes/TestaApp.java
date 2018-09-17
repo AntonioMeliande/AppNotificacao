@@ -11,7 +11,7 @@ public class TestaApp {
 		String[] nomes = {"RJ"};
 		
 		Malote malote = new Malote();
-		malote.setSrtes(nomes);
+		malote.setSrte(nomes);
 		malote.setOficio("Informe o nº oficio");
 		malote.setQuantidade(0);
 		malote.setDataEnvio("DD/MM/AAA");
