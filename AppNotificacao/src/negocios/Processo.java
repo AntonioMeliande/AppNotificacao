@@ -1,6 +1,6 @@
 package negocios;
 
-public class Processo {
+public abstract class Processo {
 
 	private String numero;
 	private String notificacao;
@@ -17,7 +17,9 @@ public class Processo {
 			this.notificacao = notificacao;
 			this.recebido = recebido;
 		}
-				
+		
+		public abstract void imprimirTipo();
+						
 		public void exibir() {
 			System.out.println("\n#PROCESSO#\n");
 			System.out.printf("Número do Processo: %s\n"
@@ -31,6 +33,10 @@ public class Processo {
 			empresa.exibir();		
 			informacao.exibir();
 					
+		}
+		
+		protected final void adicionarCabecalho() {
+			System.out.printf("#Processo#");
 		}
 
 		public String getNumero() {

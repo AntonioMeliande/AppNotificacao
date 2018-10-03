@@ -1,26 +1,21 @@
 package negocios;
 
-public class Malote {
+import java.util.Calendar;
+import java.util.List;
+
+import auxiliar.Constante;
+import interfaces.IExibido;
+
+public class Malote implements IExibido {
 	
 	private String[] srte;
 	private String oficio;
 	private int quantidade;
-	private String dataEnvio;
-	private Processo processo;
+	private Calendar dataEnvio;
+	private List<Processo> processos;
 	
-	public Malote() {
-		
-	}
-	
-	public Malote(String[] srte, String oficio, int quantidade, String dataEnvio) {
-		this.srte = srte;
-		this.oficio = oficio;
-		this.quantidade = quantidade;
-		this.dataEnvio = dataEnvio;
-	}
-		
-			
-	public void exibir() {
+	@Override
+		public void exibir() {
 		System.out.println("\n#MALOTE#\n");
 		
 		for(String o : srte) {
@@ -32,13 +27,19 @@ public class Malote {
 				+ "Data do Envio: %s\n",
 				oficio,
 				quantidade,
-				dataEnvio
+				Constante.obterDataFormatada(dataEnvio.getTime())
 				);
 		
-		processo.exibir();	
+		this.exibirProcessos();	
 				
 	}
-
+	private void exibirProcessos() {
+		System.out.println("Processos");
+		for (Processo processo : processos) {
+			processo.exibir();
+		}
+	}
+	
 	public String[] getSrte() {
 		return srte;
 	}
@@ -55,28 +56,29 @@ public class Malote {
 		this.quantidade = quantidade;
 	}
 
-	public String getDataEnvio() {
+	public Calendar getDataEnvio() {
 		return dataEnvio;
 	}
 
-	public void setDataEnvio(String dataEnvio) {
+	public void setDataEnvio(Calendar dataEnvio) {
 		this.dataEnvio = dataEnvio;
 	}
 
-	public Processo getProcesso() {
-		return processo;
-	}
-
-	public void setProcesso(Processo processo) {
-		this.processo = processo;
-	}
-
+	
 	public String getOficio() {
 		return oficio;
 	}
 
 	public void setOficio(String oficio) {
 		this.oficio = oficio;
+	}
+
+	public List<Processo> getProcessos() {
+		return processos;
+	}
+
+	public void setProcessos(List<Processo> processos) {
+		this.processos = processos;
 	}
 
 		

@@ -1,6 +1,8 @@
 package negocios;
 
-public class Empresa {
+import interfaces.IExibido;
+
+public class Empresa implements IExibido{
 	
 	private String razaoSocial;
 	private String inscricao;

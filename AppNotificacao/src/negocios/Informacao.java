@@ -1,26 +1,23 @@
 package negocios;
 
-public class Informacao {
+import java.util.Calendar;
 
-	private String dataRecebimento;
-	private String dataLavratura;
-	private String dataUltCiencia;
-	private String dataTermoEnc;
-	private String dataCadastro;
+import auxiliar.Constante;
+import interfaces.IExibido;
+
+public class Informacao implements IExibido{
+
+	private Calendar dataRecebimento;
+	private Calendar dataLavratura;
+	private Calendar dataUltCiencia;
+	private Calendar dataTermoEnc;
+	private Calendar dataCadastro;
 	
 	public Informacao() {
 		
 	}
 	
-	public Informacao(String dataRecebimento, String dataLavratura, String dataUltCiencia, String dataTermoEnc,
-			String dataCadastro) {
-		this.dataRecebimento = dataRecebimento;
-		this.dataLavratura = dataLavratura;
-		this.dataUltCiencia = dataUltCiencia;
-		this.dataTermoEnc = dataTermoEnc;
-		this.dataCadastro = dataCadastro;
-	}
-	
+		
 	public void exibir() {
 		System.out.println("\n#INFORMAÇÃO#\n");
 		System.out.printf("Data do Recebimento: %s\n"
@@ -28,51 +25,51 @@ public class Informacao {
 				+ "Data da Última Ciência: %s\n"
 				+ "Data Termo de Encaminhamento: %s\n"
 				+ "Data do Cadastramento: %s\n",
-				dataRecebimento,
-				dataLavratura,
-				dataUltCiencia,
-				dataTermoEnc,
-				dataCadastro
+				Constante.obterDataFormatada(dataRecebimento.getTime()),
+				Constante.obterDataFormatada(dataLavratura.getTime()),
+				Constante.obterDataFormatada(dataUltCiencia.getTime()),
+				Constante.obterDataFormatada(dataTermoEnc.getTime()),
+				Constante.obterDataFormatada(dataCadastro.getTime())
 				);	
 	}
 
-	public String getDataRecebimento() {
+	public Calendar getDataRecebimento() {
 		return dataRecebimento;
 	}
 
-	public void setDataRecebimento(String dataRecebimento) {
+	public void setDataRecebimento(Calendar dataRecebimento) {
 		this.dataRecebimento = dataRecebimento;
 	}
 
-	public String getDataLavratura() {
+	public Calendar getDataLavratura() {
 		return dataLavratura;
 	}
 
-	public void setDataLavratura(String dataLavratura) {
+	public void setDataLavratura(Calendar dataLavratura) {
 		this.dataLavratura = dataLavratura;
 	}
 
-	public String getDataUltCiencia() {
+	public Calendar getDataUltCiencia() {
 		return dataUltCiencia;
 	}
 
-	public void setDataUltCiencia(String dataUltCiencia) {
+	public void setDataUltCiencia(Calendar dataUltCiencia) {
 		this.dataUltCiencia = dataUltCiencia;
 	}
 
-	public String getDataTermoEnc() {
+	public Calendar getDataTermoEnc() {
 		return dataTermoEnc;
 	}
 
-	public void setDataTermoEnc(String dataTermoEnc) {
+	public void setDataTermoEnc(Calendar dataTermoEnc) {
 		this.dataTermoEnc = dataTermoEnc;
 	}
 
-	public String getDataCadastro() {
+	public Calendar getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(String dataCadastro) {
+	public void setDataCadastro(Calendar dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 	
