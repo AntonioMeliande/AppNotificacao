@@ -14,15 +14,12 @@ public class ProcessoNfgc extends Processo {
 		
 		System.out.println(" - #NFGC#");
 		
-		super.exibir();
-	}
-			
-	public void exibir() {
-				System.out.printf("Competencia Inicial: %s\n"
-				+ "Competencia Final: %s\n",
-				competenciaInicial,
-				competenciaFinal
-				);	
+		System.out.printf("Competencia Inicial: %s\n"
+		+ "Competencia Final: %s\n",
+		competenciaInicial,
+		competenciaFinal
+		);
+		
 		super.exibir();
 	}
 

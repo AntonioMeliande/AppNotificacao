@@ -12,16 +12,12 @@ public class ProcessoNdfc extends Processo {
 		
 		System.out.println(" - #NDFC#");
 		
-		super.exibir();
-	}
-			
-	public void exibir() {
-				System.out.printf("Tipo de Cadastramento: %s\n"
-				+ "Prioridade: %s\n",
-				tipoCadastramento,
-				prioridade ? "sim" :"nao"
-				);
-				
+		System.out.printf("Tipo de Cadastramento: %s\n"
+		+ "Prioridade: %s\n",
+		tipoCadastramento,
+		prioridade ? "sim" :"nao"
+		);
+		
 		super.exibir();
 	}
 

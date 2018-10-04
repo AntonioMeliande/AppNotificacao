@@ -21,7 +21,7 @@ public abstract class Processo {
 		public abstract void imprimirTipo();
 						
 		public void exibir() {
-			System.out.println("\n#PROCESSO#\n");
+
 			System.out.printf("Número do Processo: %s\n"
 					+ "Número da Notificação: %s\n"
 					+ "Recebido: %s\n",
